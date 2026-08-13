@@ -1,0 +1,100 @@
+2026-08-14 00:02:08,256 [INFO] Source folder: D:\Programming\Personal_projects_D\PUSH_TO_GITHUB
+2026-08-14 00:02:08,256 [INFO] Temp log: C:\Users\MORDEK~1\AppData\Local\Temp\push_to_github_20260814_000208.log
+2026-08-14 00:02:08,257 [DEBUG] Running: git --version
+2026-08-14 00:02:08,423 [DEBUG] stdout: git version 2.55.0.windows.2
+2026-08-14 00:02:08,423 [DEBUG] stderr: 
+2026-08-14 00:02:08,423 [INFO] Existing git repository detected.
+2026-08-14 00:02:08,424 [DEBUG] Running: git remote -v
+2026-08-14 00:02:08,594 [DEBUG] stdout: origin	https://github.com/MoRDekai1364/Push_to_Github.git (fetch)
+origin	https://github.com/MoRDekai1364/Push_to_Github.git (push)
+2026-08-14 00:02:08,594 [DEBUG] stderr: 
+2026-08-14 00:02:08,595 [INFO] Detected remotes:
+2026-08-14 00:02:08,596 [INFO]   1. origin -> https://github.com/MoRDekai1364/Push_to_Github.git
+2026-08-14 00:02:08,596 [INFO]   2. Enter a new repository URL
+2026-08-14 00:02:09,308 [INFO] Verifying repository access.
+2026-08-14 00:02:09,308 [DEBUG] Running: git ls-remote https://github.com/MoRDekai1364/Push_to_Github.git
+2026-08-14 00:02:10,251 [DEBUG] stdout: 122e390633f175eeb8b52555e5aec039c0eeb39b	HEAD
+122e390633f175eeb8b52555e5aec039c0eeb39b	refs/heads/main
+2026-08-14 00:02:10,251 [DEBUG] stderr: 
+2026-08-14 00:02:10,251 [DEBUG] Running: git branch --list
+2026-08-14 00:02:10,421 [DEBUG] stdout: * main
+2026-08-14 00:02:10,422 [DEBUG] stderr: 
+2026-08-14 00:02:10,422 [DEBUG] Running: git ls-remote --heads origin
+2026-08-14 00:02:11,260 [DEBUG] stdout: 122e390633f175eeb8b52555e5aec039c0eeb39b	refs/heads/main
+2026-08-14 00:02:11,260 [DEBUG] stderr: 
+2026-08-14 00:02:11,260 [INFO] Detected branches:
+2026-08-14 00:02:11,260 [INFO]   1. main
+2026-08-14 00:02:11,260 [INFO]   2. Enter a new branch name
+2026-08-14 00:02:12,247 [DEBUG] Running: git branch --list
+2026-08-14 00:02:12,421 [DEBUG] stdout: * main
+2026-08-14 00:02:12,422 [DEBUG] stderr: 
+2026-08-14 00:02:12,422 [DEBUG] Running: git checkout main
+2026-08-14 00:02:12,644 [DEBUG] stdout: M	push_to_github.py
+Your branch is up to date with 'origin/main'.
+2026-08-14 00:02:12,644 [DEBUG] stderr: Already on 'main'
+2026-08-14 00:02:13,783 [INFO] No commit message entered — using: this is automated commit message 2026-08-14 00:02:13
+2026-08-14 00:02:13,783 [DEBUG] Running: git add -A
+2026-08-14 00:02:13,960 [DEBUG] stdout: 
+2026-08-14 00:02:13,960 [DEBUG] stderr: warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+2026-08-14 00:02:13,960 [DEBUG] Running: git status --porcelain
+2026-08-14 00:02:14,150 [DEBUG] stdout: A  README.md
+A  logs/push_to_github_20260811_103825.log
+M  push_to_github.py
+2026-08-14 00:02:14,150 [DEBUG] stderr: 
+2026-08-14 00:02:14,150 [DEBUG] Running: git commit -m this is automated commit message 2026-08-14 00:02:13
+2026-08-14 00:02:14,473 [DEBUG] stdout: [main 8834e4d] this is automated commit message 2026-08-14 00:02:13
+ 3 files changed, 156 insertions(+), 1 deletion(-)
+ create mode 100644 README.md
+ create mode 100644 logs/push_to_github_20260811_103825.log
+2026-08-14 00:02:14,474 [DEBUG] stderr: 
+2026-08-14 00:02:14,474 [INFO] Checking for remote changes before pushing.
+2026-08-14 00:02:14,474 [DEBUG] Running: git fetch origin
+2026-08-14 00:02:15,533 [DEBUG] stdout: 
+2026-08-14 00:02:15,533 [DEBUG] stderr: 
+2026-08-14 00:02:15,533 [DEBUG] Running: git rev-parse --verify --quiet origin/main
+2026-08-14 00:02:15,685 [DEBUG] stdout: 122e390633f175eeb8b52555e5aec039c0eeb39b
+2026-08-14 00:02:15,685 [DEBUG] stderr: 
+2026-08-14 00:02:15,685 [DEBUG] Running: git rev-parse main
+2026-08-14 00:02:15,841 [DEBUG] stdout: 8834e4d571288d77acfb55cc5d819f94509f59ff
+2026-08-14 00:02:15,841 [DEBUG] stderr: 
+2026-08-14 00:02:15,841 [DEBUG] Running: git rev-parse origin/main
+2026-08-14 00:02:15,992 [DEBUG] stdout: 122e390633f175eeb8b52555e5aec039c0eeb39b
+2026-08-14 00:02:15,992 [DEBUG] stderr: 
+2026-08-14 00:02:15,992 [DEBUG] Running: git rev-list --count main..origin/main
+2026-08-14 00:02:16,149 [DEBUG] stdout: 0
+2026-08-14 00:02:16,149 [DEBUG] stderr: 
+2026-08-14 00:02:16,149 [DEBUG] Running: git push -u origin main --progress
+2026-08-14 00:02:18,718 [DEBUG] Enumerating objects: 9, done.
+2026-08-14 00:02:18,720 [DEBUG] Counting objects:  11% (1/9)
+2026-08-14 00:02:18,720 [DEBUG] Counting objects:  22% (2/9)
+2026-08-14 00:02:18,721 [DEBUG] Counting objects:  33% (3/9)
+2026-08-14 00:02:18,721 [DEBUG] Counting objects:  44% (4/9)
+2026-08-14 00:02:18,721 [DEBUG] Counting objects:  55% (5/9)
+2026-08-14 00:02:18,722 [DEBUG] Counting objects:  66% (6/9)
+2026-08-14 00:02:18,722 [DEBUG] Counting objects:  77% (7/9)
+2026-08-14 00:02:18,722 [DEBUG] Counting objects:  88% (8/9)
+2026-08-14 00:02:18,723 [DEBUG] Counting objects: 100% (9/9)
+2026-08-14 00:02:18,723 [DEBUG] Counting objects: 100% (9/9), done.
+2026-08-14 00:02:18,723 [DEBUG] Delta compression using up to 16 threads
+2026-08-14 00:02:18,724 [DEBUG] Compressing objects:  16% (1/6)
+2026-08-14 00:02:18,724 [DEBUG] Compressing objects:  33% (2/6)
+2026-08-14 00:02:18,724 [DEBUG] Compressing objects:  50% (3/6)
+2026-08-14 00:02:18,724 [DEBUG] Compressing objects:  66% (4/6)
+2026-08-14 00:02:18,724 [DEBUG] Compressing objects:  83% (5/6)
+2026-08-14 00:02:18,725 [DEBUG] Compressing objects: 100% (6/6)
+2026-08-14 00:02:18,725 [DEBUG] Compressing objects: 100% (6/6), done.
+2026-08-14 00:02:18,727 [DEBUG] Writing objects:  16% (1/6)
+2026-08-14 00:02:18,727 [DEBUG] Writing objects:  33% (2/6)
+2026-08-14 00:02:18,728 [DEBUG] Writing objects:  50% (3/6)
+2026-08-14 00:02:18,728 [DEBUG] Writing objects:  66% (4/6)
+2026-08-14 00:02:18,730 [DEBUG] Writing objects:  83% (5/6)
+2026-08-14 00:02:18,730 [DEBUG] Writing objects: 100% (6/6)
+2026-08-14 00:02:18,730 [DEBUG] Writing objects: 100% (6/6), 3.36 KiB | 860.00 KiB/s, done.
+2026-08-14 00:02:18,730 [DEBUG] Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+2026-08-14 00:02:20,679 [DEBUG] remote: Resolving deltas:   0% (0/1)
+2026-08-14 00:02:20,680 [DEBUG] remote: Resolving deltas: 100% (1/1)
+2026-08-14 00:02:20,680 [DEBUG] remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+2026-08-14 00:02:20,693 [DEBUG] To https://github.com/MoRDekai1364/Push_to_Github.git
+2026-08-14 00:02:20,693 [DEBUG] 122e390..8834e4d  main -> main
+2026-08-14 00:02:20,726 [DEBUG] branch 'main' set up to track 'origin/main'.
+2026-08-14 00:02:20,740 [INFO] Push finished in 4.6s. Done.

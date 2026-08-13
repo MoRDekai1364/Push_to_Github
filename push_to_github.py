@@ -91,6 +91,8 @@ def select_repo():
             logger.info(f"  {i}. {name} -> {remotes[name]}")
         logger.info(f"  {len(names)+1}. Enter a new repository URL")
         choice = input("Select repository: ").strip()
+        if not choice:
+            choice = "1"
         if choice.isdigit() and 1 <= int(choice) <= len(names):
             name = names[int(choice) - 1]
             url = remotes[name]
@@ -147,6 +149,8 @@ def select_branch(remote_name):
                 logger.info(f"  {i}. {name}")
             logger.info(f"  {len(all_branches)+1}. Enter a new branch name")
             choice = input("Select branch: ").strip()
+            if not choice:
+                choice = "1"
             if choice.isdigit() and 1 <= int(choice) <= len(all_branches):
                 return all_branches[int(choice) - 1]
             if choice.isdigit() and int(choice) == len(all_branches) + 1:
@@ -284,7 +288,7 @@ def main():
         checkout_branch(branch)
         message = input("Enter commit message: ").strip()
         if not message:
-            message = f"this is automated commit message {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+            message = f"(this is automated commit message) {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
             logger.info(f"No commit message entered — using: {message}")
         committed = stage_and_commit(message)
         sync_with_remote(remote_name, branch)
