@@ -173,12 +173,43 @@ def is_valid_branch_name(name):
     result = run(["git", "check-ref-format", "--branch", name], check=False)
     return result.returncode == 0
 
+def check_no_unmerged_paths():
+    status = run(["git", "status", "--porcelain"])
+    unmerged = [line for line in status.stdout.splitlines() if line.startswith("UU") or line.startswith("AA") or line.startswith("DD")]
+    if unmerged:
+        logger.error("Unresolved merge conflicts detected from a previous stash pop or merge:")
+        for line in unmerged:
+            logger.error(f"  - {line.strip()}")
+        fail(
+            "Resolve these files manually (edit out the conflict markers, then "
+            "'git add <file>' each one), commit, and re-run this script. "
+            "Auto-resolving content conflicts isn't safe to do automatically."
+        )
+
+
 def checkout_branch(branch):
+    check_no_unmerged_paths()
+    status = run(["git", "status", "--porcelain"])
+    has_changes = bool(status.stdout.strip())
+    
+    if has_changes:
+        run(["git", "stash"])
+        
     local_branches = get_local_branches()
     if branch in local_branches:
         run(["git", "checkout", branch])
     else:
         run(["git", "checkout", "-b", branch])
+        
+    if has_changes:
+        pop_res = run(["git", "stash", "pop"], check=False)
+        if pop_res.returncode != 0:
+            conflict_status = run(["git", "diff", "--name-only", "--diff-filter=U"], check=False)
+            if conflict_status.stdout.strip():
+                logger.error("Conflicting files:")
+                for file in conflict_status.stdout.strip().splitlines():
+                    logger.error(f"  - {file}")
+            fail("Merge conflict during stash pop. Resolve manually in terminal before continuing.")
 
 def stage_and_commit(message):
     run(["git", "add", "-A"])
