@@ -192,7 +192,9 @@ def checkout_branch(branch):
     status = run(["git", "status", "--porcelain"])
     has_changes = bool(status.stdout.strip())
     
-    if has_changes:
+    has_commits = run(["git", "rev-parse", "HEAD"], check=False).returncode == 0
+    
+    if has_changes and has_commits:
         run(["git", "stash"])
         
     local_branches = get_local_branches()
@@ -201,7 +203,7 @@ def checkout_branch(branch):
     else:
         run(["git", "checkout", "-b", branch])
         
-    if has_changes:
+    if has_changes and has_commits:
         pop_res = run(["git", "stash", "pop"], check=False)
         if pop_res.returncode != 0:
             conflict_status = run(["git", "diff", "--name-only", "--diff-filter=U"], check=False)
