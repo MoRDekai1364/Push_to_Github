@@ -1,0 +1,125 @@
+2026-09-05 22:19:41,446 [INFO] Source folder: D:\Programming\Personal_projects_D\PUSH_TO_GITHUB
+2026-09-05 22:19:41,446 [INFO] Temp log: C:\Users\MORDEK~1\AppData\Local\Temp\push_to_github_20260905_221941.log
+2026-09-05 22:19:41,446 [DEBUG] Running: git --version
+2026-09-05 22:19:41,549 [DEBUG] stdout: git version 2.55.0.windows.2
+2026-09-05 22:19:41,549 [DEBUG] stderr: 
+2026-09-05 22:19:41,552 [INFO] Existing git repository detected.
+2026-09-05 22:19:41,553 [DEBUG] Running: git remote -v
+2026-09-05 22:19:41,660 [DEBUG] stdout: origin	https://github.com/MoRDekai1364/Push_to_Github.git (fetch)
+origin	https://github.com/MoRDekai1364/Push_to_Github.git (push)
+2026-09-05 22:19:41,661 [DEBUG] stderr: 
+2026-09-05 22:19:41,661 [INFO] Detected remotes:
+2026-09-05 22:19:41,661 [INFO]   1. origin -> https://github.com/MoRDekai1364/Push_to_Github.git
+2026-09-05 22:19:41,662 [INFO]   2. Enter a new repository URL
+2026-09-05 22:19:42,343 [INFO] Verifying repository access.
+2026-09-05 22:19:42,344 [DEBUG] Running: git ls-remote https://github.com/MoRDekai1364/Push_to_Github.git
+2026-09-05 22:19:43,324 [DEBUG] stdout: 4fffe86c5084c359c13af68493d3ce8921d58eb1	HEAD
+4fffe86c5084c359c13af68493d3ce8921d58eb1	refs/heads/main
+2026-09-05 22:19:43,324 [DEBUG] stderr: 
+2026-09-05 22:19:43,324 [DEBUG] Running: git branch --list
+2026-09-05 22:19:43,437 [DEBUG] stdout: * main
+2026-09-05 22:19:43,437 [DEBUG] stderr: 
+2026-09-05 22:19:43,437 [DEBUG] Running: git ls-remote --heads origin
+2026-09-05 22:19:44,335 [DEBUG] stdout: 4fffe86c5084c359c13af68493d3ce8921d58eb1	refs/heads/main
+2026-09-05 22:19:44,335 [DEBUG] stderr: 
+2026-09-05 22:19:44,335 [INFO] Detected branches:
+2026-09-05 22:19:44,335 [INFO]   1. main
+2026-09-05 22:19:44,335 [INFO]   2. Enter a new branch name
+2026-09-05 22:19:45,864 [DEBUG] Running: git status --porcelain
+2026-09-05 22:19:45,979 [DEBUG] stdout: M push_to_github.py
+?? logs/push_to_github_20260902_110558.log
+2026-09-05 22:19:45,980 [DEBUG] stderr: 
+2026-09-05 22:19:45,980 [DEBUG] Running: git status --porcelain
+2026-09-05 22:19:46,093 [DEBUG] stdout: M push_to_github.py
+?? logs/push_to_github_20260902_110558.log
+2026-09-05 22:19:46,093 [DEBUG] stderr: 
+2026-09-05 22:19:46,093 [DEBUG] Running: git rev-parse HEAD
+2026-09-05 22:19:46,194 [DEBUG] stdout: 4fffe86c5084c359c13af68493d3ce8921d58eb1
+2026-09-05 22:19:46,194 [DEBUG] stderr: 
+2026-09-05 22:19:46,194 [DEBUG] Running: git stash
+2026-09-05 22:19:46,502 [DEBUG] stdout: Saved working directory and index state WIP on main: 4fffe86 (this is automated commit message) 2026-09-02 11:06:06
+2026-09-05 22:19:46,503 [DEBUG] stderr: 
+2026-09-05 22:19:46,503 [DEBUG] Running: git branch --list
+2026-09-05 22:19:46,609 [DEBUG] stdout: * main
+2026-09-05 22:19:46,609 [DEBUG] stderr: 
+2026-09-05 22:19:46,610 [DEBUG] Running: git checkout main
+2026-09-05 22:19:46,736 [DEBUG] stdout: Your branch is up to date with 'origin/main'.
+2026-09-05 22:19:46,736 [DEBUG] stderr: Already on 'main'
+2026-09-05 22:19:46,736 [DEBUG] Running: git stash pop
+2026-09-05 22:19:46,951 [DEBUG] stdout: On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   push_to_github.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	logs/push_to_github_20260902_110558.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (ffbf8354ed8bc41d3d6eba664b1ad5b604e4e40e)
+2026-09-05 22:19:46,951 [DEBUG] stderr: 
+2026-09-05 22:19:47,791 [INFO] No commit message entered — using: (this is automated commit message) 2026-09-05 22:19:47
+2026-09-05 22:19:47,792 [DEBUG] Running: git add -A
+2026-09-05 22:19:47,902 [DEBUG] stdout: 
+2026-09-05 22:19:47,902 [DEBUG] stderr: 
+2026-09-05 22:19:47,902 [DEBUG] Running: git status --porcelain
+2026-09-05 22:19:48,009 [DEBUG] stdout: A  logs/push_to_github_20260902_110558.log
+M  push_to_github.py
+2026-09-05 22:19:48,009 [DEBUG] stderr: 
+2026-09-05 22:19:48,009 [DEBUG] Running: git commit -m (this is automated commit message) 2026-09-05 22:19:47
+2026-09-05 22:19:48,230 [DEBUG] stdout: [main b816c8c] (this is automated commit message) 2026-09-05 22:19:47
+ 2 files changed, 126 insertions(+), 2 deletions(-)
+ create mode 100644 logs/push_to_github_20260902_110558.log
+2026-09-05 22:19:48,230 [DEBUG] stderr: 
+2026-09-05 22:19:48,230 [INFO] Checking for remote changes before pushing.
+2026-09-05 22:19:48,231 [DEBUG] Running: git fetch origin
+2026-09-05 22:19:49,258 [DEBUG] stdout: 
+2026-09-05 22:19:49,258 [DEBUG] stderr: 
+2026-09-05 22:19:49,258 [DEBUG] Running: git rev-parse --verify --quiet origin/main
+2026-09-05 22:19:49,370 [DEBUG] stdout: 4fffe86c5084c359c13af68493d3ce8921d58eb1
+2026-09-05 22:19:49,370 [DEBUG] stderr: 
+2026-09-05 22:19:49,370 [DEBUG] Running: git rev-parse main
+2026-09-05 22:19:49,467 [DEBUG] stdout: b816c8c8855de2fbe41c0f8f8a2f31272a3b939a
+2026-09-05 22:19:49,468 [DEBUG] stderr: 
+2026-09-05 22:19:49,468 [DEBUG] Running: git rev-parse origin/main
+2026-09-05 22:19:49,572 [DEBUG] stdout: 4fffe86c5084c359c13af68493d3ce8921d58eb1
+2026-09-05 22:19:49,572 [DEBUG] stderr: 
+2026-09-05 22:19:49,572 [DEBUG] Running: git rev-list --count main..origin/main
+2026-09-05 22:19:49,675 [DEBUG] stdout: 0
+2026-09-05 22:19:49,676 [DEBUG] stderr: 
+2026-09-05 22:19:49,676 [DEBUG] Running: git push -u origin main --progress
+2026-09-05 22:19:52,136 [DEBUG] Enumerating objects: 8, done.
+2026-09-05 22:19:52,137 [DEBUG] Counting objects:  12% (1/8)
+2026-09-05 22:19:52,137 [DEBUG] Counting objects:  25% (2/8)
+2026-09-05 22:19:52,138 [DEBUG] Counting objects:  37% (3/8)
+2026-09-05 22:19:52,138 [DEBUG] Counting objects:  50% (4/8)
+2026-09-05 22:19:52,138 [DEBUG] Counting objects:  62% (5/8)
+2026-09-05 22:19:52,139 [DEBUG] Counting objects:  75% (6/8)
+2026-09-05 22:19:52,139 [DEBUG] Counting objects:  87% (7/8)
+2026-09-05 22:19:52,139 [DEBUG] Counting objects: 100% (8/8)
+2026-09-05 22:19:52,139 [DEBUG] Counting objects: 100% (8/8), done.
+2026-09-05 22:19:52,139 [DEBUG] Delta compression using up to 16 threads
+2026-09-05 22:19:52,140 [DEBUG] Compressing objects:  20% (1/5)
+2026-09-05 22:19:52,141 [DEBUG] Compressing objects:  40% (2/5)
+2026-09-05 22:19:52,141 [DEBUG] Compressing objects:  60% (3/5)
+2026-09-05 22:19:52,142 [DEBUG] Compressing objects:  80% (4/5)
+2026-09-05 22:19:52,142 [DEBUG] Compressing objects: 100% (5/5)
+2026-09-05 22:19:52,142 [DEBUG] Compressing objects: 100% (5/5), done.
+2026-09-05 22:19:52,142 [DEBUG] Writing objects:  20% (1/5)
+2026-09-05 22:19:52,143 [DEBUG] Writing objects:  40% (2/5)
+2026-09-05 22:19:52,143 [DEBUG] Writing objects:  60% (3/5)
+2026-09-05 22:19:52,143 [DEBUG] Writing objects:  80% (4/5)
+2026-09-05 22:19:52,143 [DEBUG] Writing objects: 100% (5/5)
+2026-09-05 22:19:52,143 [DEBUG] Writing objects: 100% (5/5), 2.30 KiB | 2.30 MiB/s, done.
+2026-09-05 22:19:52,144 [DEBUG] Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+2026-09-05 22:19:53,113 [DEBUG] remote: Resolving deltas:   0% (0/2)
+2026-09-05 22:19:53,114 [DEBUG] remote: Resolving deltas:  50% (1/2)
+2026-09-05 22:19:53,114 [DEBUG] remote: Resolving deltas: 100% (2/2)
+2026-09-05 22:19:53,114 [DEBUG] remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+2026-09-05 22:19:53,121 [DEBUG] To https://github.com/MoRDekai1364/Push_to_Github.git
+2026-09-05 22:19:53,122 [DEBUG] 4fffe86..b816c8c  main -> main
+2026-09-05 22:19:53,155 [DEBUG] branch 'main' set up to track 'origin/main'.
+2026-09-05 22:19:53,164 [INFO] Push finished in 3.5s. Done.
