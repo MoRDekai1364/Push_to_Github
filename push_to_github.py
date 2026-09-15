@@ -382,7 +382,11 @@ def main():
                 for path in modified_files:
                     lines.append(f"  [modified] {path}")
             message = "\n".join(lines)
-            logger.info("No commit message entered — using automated message with changed file list.")
+            logger.info("No commit message entered — using automated message:")
+            logger.info("----------------------------------------")
+            for line in message.splitlines():
+                logger.info(line)
+            logger.info("----------------------------------------")
         committed = stage_and_commit(message)
         sync_with_remote(remote_name, branch)
         push_with_progress(remote_name, branch)
