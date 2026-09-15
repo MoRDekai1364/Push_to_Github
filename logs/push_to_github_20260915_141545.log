@@ -1,0 +1,135 @@
+2026-09-15 14:15:45,417 [INFO] Source folder: E:\Programming\Personal_projects\PUSH_TO_GITHUB
+2026-09-15 14:15:45,417 [INFO] Temp log: C:\Users\MORDEK~1\AppData\Local\Temp\push_to_github_20260915_141545.log
+2026-09-15 14:15:45,417 [DEBUG] Running: git --version
+2026-09-15 14:15:45,512 [DEBUG] stdout: git version 2.55.0.windows.2
+2026-09-15 14:15:45,512 [DEBUG] stderr: 
+2026-09-15 14:15:45,512 [INFO] Existing git repository detected.
+2026-09-15 14:15:45,513 [DEBUG] Running: git remote -v
+2026-09-15 14:15:45,612 [DEBUG] stdout: origin	https://github.com/MoRDekai1364/Push_to_Github.git (fetch)
+origin	https://github.com/MoRDekai1364/Push_to_Github.git (push)
+2026-09-15 14:15:45,612 [DEBUG] stderr: 
+2026-09-15 14:15:45,613 [INFO] Detected remotes:
+2026-09-15 14:15:45,613 [INFO]   1. origin -> https://github.com/MoRDekai1364/Push_to_Github.git
+2026-09-15 14:15:45,613 [INFO]   2. Enter a new repository URL
+2026-09-15 14:15:46,769 [INFO] Verifying repository access.
+2026-09-15 14:15:46,770 [DEBUG] Running: git ls-remote https://github.com/MoRDekai1364/Push_to_Github.git
+2026-09-15 14:15:47,606 [DEBUG] stdout: 879aab7959a5e76a1ce7f41017129f1ef7cb2609	HEAD
+879aab7959a5e76a1ce7f41017129f1ef7cb2609	refs/heads/main
+2026-09-15 14:15:47,606 [DEBUG] stderr: 
+2026-09-15 14:15:47,606 [DEBUG] Running: git branch --list
+2026-09-15 14:15:47,704 [DEBUG] stdout: * main
+2026-09-15 14:15:47,704 [DEBUG] stderr: 
+2026-09-15 14:15:47,704 [DEBUG] Running: git ls-remote --heads origin
+2026-09-15 14:15:48,437 [DEBUG] stdout: 879aab7959a5e76a1ce7f41017129f1ef7cb2609	refs/heads/main
+2026-09-15 14:15:48,438 [DEBUG] stderr: 
+2026-09-15 14:15:48,438 [INFO] Detected branches:
+2026-09-15 14:15:48,438 [INFO]   1. main
+2026-09-15 14:15:48,438 [INFO]   2. Enter a new branch name
+2026-09-15 14:15:49,262 [DEBUG] Running: git status --porcelain
+2026-09-15 14:15:49,366 [DEBUG] stdout: M push_to_github.py
+?? logs/push_to_github_20260909_095248.log
+2026-09-15 14:15:49,366 [DEBUG] stderr: 
+2026-09-15 14:15:49,366 [DEBUG] Running: git status --porcelain
+2026-09-15 14:15:49,470 [DEBUG] stdout: M push_to_github.py
+?? logs/push_to_github_20260909_095248.log
+2026-09-15 14:15:49,470 [DEBUG] stderr: 
+2026-09-15 14:15:49,470 [DEBUG] Running: git rev-parse HEAD
+2026-09-15 14:15:49,564 [DEBUG] stdout: 5a7c20d35d27f34a14c998ba059374e7695e96b4
+2026-09-15 14:15:49,564 [DEBUG] stderr: 
+2026-09-15 14:15:49,564 [DEBUG] Running: git stash
+2026-09-15 14:15:49,957 [DEBUG] stdout: Saved working directory and index state WIP on main: 5a7c20d added new  error handling case
+2026-09-15 14:15:49,957 [DEBUG] stderr: 
+2026-09-15 14:15:49,957 [DEBUG] Running: git branch --list
+2026-09-15 14:15:50,064 [DEBUG] stdout: * main
+2026-09-15 14:15:50,064 [DEBUG] stderr: 
+2026-09-15 14:15:50,064 [DEBUG] Running: git checkout main
+2026-09-15 14:15:50,182 [DEBUG] stdout: Your branch is up to date with 'origin/main'.
+2026-09-15 14:15:50,182 [DEBUG] stderr: Already on 'main'
+2026-09-15 14:15:50,182 [DEBUG] Running: git stash pop
+2026-09-15 14:15:50,363 [DEBUG] stdout: On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   push_to_github.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	logs/push_to_github_20260909_095248.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (59252beb4afea2fa447ac445ca53891623475ba9)
+2026-09-15 14:15:50,363 [DEBUG] stderr: 
+2026-09-15 14:15:50,363 [DEBUG] Running: git add -A
+2026-09-15 14:15:50,543 [DEBUG] stdout: 
+2026-09-15 14:15:50,543 [DEBUG] stderr: 
+2026-09-15 14:15:50,544 [DEBUG] Running: git status --porcelain
+2026-09-15 14:15:50,652 [DEBUG] stdout: A  logs/push_to_github_20260909_095248.log
+M  push_to_github.py
+2026-09-15 14:15:50,652 [DEBUG] stderr: 
+2026-09-15 14:15:51,551 [INFO] No commit message entered — using automated message with changed file list.
+2026-09-15 14:15:51,552 [DEBUG] Running: git status --porcelain
+2026-09-15 14:15:51,651 [DEBUG] stdout: A  logs/push_to_github_20260909_095248.log
+M  push_to_github.py
+2026-09-15 14:15:51,651 [DEBUG] stderr: 
+2026-09-15 14:15:51,651 [DEBUG] Running: git commit -m (this is automated commit message) 2026-09-15 14:15:51
+
+Repository: https://github.com/MoRDekai1364/Push_to_Github.git
+  [new] logs/push_to_github_20260909_095248.log
+  [modified] push_to_github.py
+2026-09-15 14:15:51,945 [DEBUG] stdout: [main 8e12918] (this is automated commit message) 2026-09-15 14:15:51
+ 2 files changed, 166 insertions(+), 3 deletions(-)
+ create mode 100644 logs/push_to_github_20260909_095248.log
+2026-09-15 14:15:51,946 [DEBUG] stderr: 
+2026-09-15 14:15:51,946 [INFO] Checking for remote changes before pushing.
+2026-09-15 14:15:51,946 [DEBUG] Running: git fetch origin
+2026-09-15 14:15:53,127 [DEBUG] stdout: 
+2026-09-15 14:15:53,127 [DEBUG] stderr: From https://github.com/MoRDekai1364/Push_to_Github
+   5a7c20d..879aab7  main       -> origin/main
+2026-09-15 14:15:53,127 [DEBUG] Running: git rev-parse --verify --quiet origin/main
+2026-09-15 14:15:53,222 [DEBUG] stdout: 879aab7959a5e76a1ce7f41017129f1ef7cb2609
+2026-09-15 14:15:53,223 [DEBUG] stderr: 
+2026-09-15 14:15:53,223 [DEBUG] Running: git rev-parse main
+2026-09-15 14:15:53,308 [DEBUG] stdout: 8e1291884e1b00d2ae95fd0e867de905b49e9d80
+2026-09-15 14:15:53,309 [DEBUG] stderr: 
+2026-09-15 14:15:53,309 [DEBUG] Running: git rev-parse origin/main
+2026-09-15 14:15:53,402 [DEBUG] stdout: 879aab7959a5e76a1ce7f41017129f1ef7cb2609
+2026-09-15 14:15:53,402 [DEBUG] stderr: 
+2026-09-15 14:15:53,403 [DEBUG] Running: git rev-list --count main..origin/main
+2026-09-15 14:15:53,506 [DEBUG] stdout: 1
+2026-09-15 14:15:53,506 [DEBUG] stderr: 
+2026-09-15 14:15:53,506 [INFO] Remote has 1 commit(s) you don't have locally — rebasing before push.
+2026-09-15 14:15:53,506 [DEBUG] Running: git rebase origin/main
+2026-09-15 14:15:53,839 [DEBUG] stdout: 
+2026-09-15 14:15:53,839 [DEBUG] stderr: Rebasing (1/1)
+Successfully rebased and updated refs/heads/main.
+2026-09-15 14:15:53,839 [INFO] Rebased local commits on top of remote changes.
+2026-09-15 14:15:53,840 [DEBUG] Running: git push -u origin main --progress
+2026-09-15 14:15:56,010 [DEBUG] Enumerating objects: 6, done.
+2026-09-15 14:15:56,010 [DEBUG] Counting objects:  16% (1/6)
+2026-09-15 14:15:56,010 [DEBUG] Counting objects:  33% (2/6)
+2026-09-15 14:15:56,011 [DEBUG] Counting objects:  50% (3/6)
+2026-09-15 14:15:56,011 [DEBUG] Counting objects:  66% (4/6)
+2026-09-15 14:15:56,011 [DEBUG] Counting objects:  83% (5/6)
+2026-09-15 14:15:56,011 [DEBUG] Counting objects: 100% (6/6)
+2026-09-15 14:15:56,012 [DEBUG] Counting objects: 100% (6/6), done.
+2026-09-15 14:15:56,012 [DEBUG] Delta compression using up to 16 threads
+2026-09-15 14:15:56,012 [DEBUG] Compressing objects:  25% (1/4)
+2026-09-15 14:15:56,012 [DEBUG] Compressing objects:  50% (2/4)
+2026-09-15 14:15:56,012 [DEBUG] Compressing objects:  75% (3/4)
+2026-09-15 14:15:56,012 [DEBUG] Compressing objects: 100% (4/4)
+2026-09-15 14:15:56,012 [DEBUG] Compressing objects: 100% (4/4), done.
+2026-09-15 14:15:56,013 [DEBUG] Writing objects:  25% (1/4)
+2026-09-15 14:15:56,014 [DEBUG] Writing objects:  50% (2/4)
+2026-09-15 14:15:56,014 [DEBUG] Writing objects:  75% (3/4)
+2026-09-15 14:15:56,014 [DEBUG] Writing objects: 100% (4/4)
+2026-09-15 14:15:56,014 [DEBUG] Writing objects: 100% (4/4), 2.26 KiB | 2.26 MiB/s, done.
+2026-09-15 14:15:56,015 [DEBUG] Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+2026-09-15 14:15:57,055 [DEBUG] remote: Resolving deltas:   0% (0/1)
+2026-09-15 14:15:57,057 [DEBUG] remote: Resolving deltas: 100% (1/1)
+2026-09-15 14:15:57,057 [DEBUG] remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+2026-09-15 14:15:57,063 [DEBUG] To https://github.com/MoRDekai1364/Push_to_Github.git
+2026-09-15 14:15:57,063 [DEBUG] 879aab7..9eba982  main -> main
+2026-09-15 14:15:57,085 [DEBUG] branch 'main' set up to track 'origin/main'.
+2026-09-15 14:15:57,093 [INFO] Push finished in 3.3s. Done.
